@@ -1,36 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Article preview component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body
+    class="bg-grey-200 font-manrope flex min-h-screen w-screen place-content-center items-center"
+  >
+    <article
+      class="mx-4 max-w-90 overflow-hidden rounded-xl bg-white sm:grid sm:max-w-[min(70vw,900px)] sm:grid-cols-[2fr_3fr]"
+    >
+      <div class="">
+        <img
+          class="h-full object-cover object-center"
+          src="./src/assets/images/drawers.jpg"
+          alt="green chest of drawers"
+        />
+      </div>
+      <div class="grid grid-cols-(--grid-template) pt-11 sm:py-11">
+        <div class="col-[main]">
+          <h1 class="text-preset-1 text-grey-900 mb-8">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p class="text-preset-2 text-grey-500 mb-8">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
+        <div class="col-[full] grid grid-cols-subgrid">
+          <div class="bg-grey-900 z-1 col-[full] row-1 grid grid-cols-subgrid">
+            <div class="col-[main] flex items-center">
+              <h2 class="text-preset-3 text-grey-400 me-8">SHARE</h2>
+              <div class="flex gap-4">
+                <a href="">
+                  <img src="./src/assets/images/icon-facebook.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./src/assets/images/icon-twitter.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./src/assets/images/icon-pinterest.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-[main] row-1 flex items-center py-5">
+            <img
+              class="me-5 h-10 rounded-full"
+              src="./src/assets/images/avatar-michelle.jpg"
+              alt="Image of Michelle"
+            />
+            <div class="">
+              <h2 class="text-preset-3 text-grey-900">Michelle Appleton</h2>
+              <h3 class="text-preset-4 text-grey-500">28 Jun 2020</h3>
+            </div>
+            <a
+              class="bg-grey-200 ms-auto flex shrink-0 rounded-full p-2"
+              href=""
+            >
+              <img
+                class="z-2"
+                src="./src/assets/images/icon-share.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
 </html>
